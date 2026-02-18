@@ -1,0 +1,125 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(7, 9, 14, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.35);
+}
+
+.inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #e8e8ea;
+}
+
+.brand strong {
+  font-weight: 700;
+}
+
+.logo {
+  width: 48px; /* Adjust size as needed */
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 4px; /* optional if your logo has rounded corners */
+}
+
+/* Desktop Links */
+.links {
+  display: flex;
+  gap: 22px;
+}
+
+.links a {
+  color: #e8e8ea;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: #00ffc8;
+}
+
+.links a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #00ffc8;
+  border-radius: 2px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #e8e8ea;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background: rgba(7, 9, 14, 0.95);
+    width: 240px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 18px;
+    gap: 18px;
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .links.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

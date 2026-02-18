@@ -1,0 +1,12 @@
+:root {
+  --bg-color: #0b0b0d;
+
+  --text-color: rgba(255, 255, 255, 0.92);
+  --muted-text: rgba(255, 255, 255, 0.68);
+
+  --accent: #f2b96b;        /* warm gold */
+  --accent-2: #ff6b6b;      /* warm red-pink */
+  --overlay-color: rgba(0, 0, 0, 0.55);
+
+  --border-radius: 16px;
+}

@@ -1,0 +1,168 @@
+.page {
+  min-height: 100vh;
+  padding: 95px 20px 70px 20px;
+  background: radial-gradient(circle at top, #0b0f1a, #05070d);
+  color: white;
+}
+
+.header {
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  opacity: 0.8;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1.6fr;
+  gap: 24px;
+}
+
+/* Left */
+.profileCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+.profileTop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  background: linear-gradient(90deg, #ff7b2f, #ff2f7b);
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.role {
+  margin: 4px 0 0 0;
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+.bio {
+  opacity: 0.8;
+  line-height: 1.8;
+  margin: 0 0 18px 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 14px;
+  text-align: center;
+}
+
+.stat h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.stat p {
+  margin: 6px 0 0 0;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* Right */
+.sectionCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.sectionText {
+  opacity: 0.8;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  opacity: 0.85;
+  line-height: 1.9;
+}
+
+.contactButton {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+
+  background: linear-gradient(90deg, #ff7b2f, #ff2f7b);
+  transition: 0.25s ease;
+}
+
+.contactButton:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .title {
+    font-size: 2.1rem;
+  }
+}

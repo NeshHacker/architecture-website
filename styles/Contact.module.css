@@ -1,0 +1,221 @@
+.page {
+  min-height: 100vh;
+  padding: 95px 20px 70px 20px;
+  background: radial-gradient(circle at top, #0b0f1a, #05070d);
+  color: white;
+}
+
+.header {
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  opacity: 0.8;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 22px;
+}
+
+/* Form */
+.formCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.cardDesc {
+  opacity: 0.78;
+  margin: 0 0 18px 0;
+  line-height: 1.7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.92rem;
+  opacity: 0.75;
+}
+
+.input {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.input:focus {
+  border: 1px solid rgba(255, 123, 47, 0.6);
+}
+
+.textarea {
+  min-height: 140px;
+  resize: none;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  outline: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.textarea:focus {
+  border: 1px solid rgba(255, 47, 123, 0.6);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.submitButton {
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: white;
+  background: rgba(255, 255, 255, 0.07);
+  transition: 0.25s ease;
+}
+
+.submitButton:hover {
+  background: rgba(255, 255, 255, 0.11);
+  transform: translateY(-2px);
+}
+
+.whatsappButton {
+  display: inline-block;
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-left: 10px;
+}
+
+.whatsappButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Right side */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.infoCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+.infoCard h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.infoCard p {
+  margin: 0;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+.bigQuote {
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 123, 47, 0.12),
+    rgba(255, 47, 123, 0.08)
+  );
+}
+
+.bigQuote p {
+  margin: 0;
+  font-weight: 600;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+}
+
+@media (max-width: 650px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2.1rem;
+  }
+}
+ 

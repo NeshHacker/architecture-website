@@ -1,0 +1,77 @@
+.footer {
+  background: #0b0b0d;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: 'Orbitron', sans-serif;
+  padding: 3rem 2rem 1.5rem 2rem;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.68);
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.brand {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  max-width: 220px;
+}
+
+.links, .services, .contact {
+  flex: 1 1 180px;
+}
+
+.links h4, .services h4, .contact h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+.links ul, .services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li, .services li {
+  margin-bottom: 0.5rem;
+}
+
+.contact p {
+  margin: 0.4rem 0;
+  font-size: 0.85rem;
+}
+
+.socials {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.54);
+}
