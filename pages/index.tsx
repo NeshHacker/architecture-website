@@ -50,46 +50,55 @@ export default function Home() {
 
         {/* FEATURED PROJECTS */}
         <Reveal delay={0.1}>
-          <section className={styles.section}>
-            <div className={styles.sectionHeader}>
-              <h2>Featured Projects</h2>
-              <p>
-                A glimpse into spaces designed for modern living and timeless
-                elegance.
-              </p>
-            </div>
-
-            <div className={styles.grid}>
-              <div className={styles.projectCard}>
-                <div className={styles.projectImage}></div>
-                <h3>Modern Villa Concept</h3>
-                <p>Minimalist lines, warm lighting, and open-plan comfort.</p>
+            <section className={`${styles.section} ${styles.featuredSection}`}>
+              <div className={styles.sectionHeader}>
+                <h2>Featured Projects</h2>
+                <p>
+                  A glimpse into spaces designed for modern living and timeless elegance.
+                </p>
               </div>
 
-              <div className={styles.projectCard}>
-                <div className={styles.projectImage}></div>
-                <h3>Luxury Apartment Interior</h3>
-                <p>Contemporary interior design with a premium finish.</p>
+              <div className={styles.grid}>
+                <div className={styles.projectCard}>
+                  <div
+                    className={styles.projectThumb}
+                    style={{ backgroundImage: "url('/images/projects/villa.jpg')" }}
+                  ></div>
+                  <h3>Modern Villa Concept</h3>
+                  <p>Minimalist lines, warm lighting, and open-plan comfort.</p>
+                </div>
+
+                <div className={styles.projectCard}>
+                  <div
+                    className={styles.projectThumb}
+                    style={{ backgroundImage: "url('/images/projects/luxury.jpeg')" }}
+                  ></div>
+                  <h3>Luxury Apartment Interior</h3>
+                  <p>Contemporary interior design with a premium finish.</p>
+                </div>
+
+                <div className={styles.projectCard}>
+                  <div
+                    className={styles.projectThumb}
+                    style={{ backgroundImage: "url('/images/projects/office.jpeg')" }}
+                  ></div>
+                  <h3>Commercial Office Space</h3>
+                  <p>Functional design built for productivity and presence.</p>
+                </div>
               </div>
 
-              <div className={styles.projectCard}>
-                <div className={styles.projectImage}></div>
-                <h3>Commercial Office Space</h3>
-                <p>Functional design built for productivity and presence.</p>
+              <div className={styles.center}>
+                <a href="/projects" className={styles.exploreBtn}>
+                  Explore All Projects →
+                </a>
               </div>
-            </div>
+            </section>
+          </Reveal>
 
-            <div className={styles.center}>
-              <Link className={styles.linkBtn} href="/projects">
-                Explore All Projects →
-              </Link>
-            </div>
-          </section>
-        </Reveal>
 
         {/* SERVICES */}
         <Reveal delay={0.15}>
-          <section className={styles.section}>
+          <section className={`${styles.section} ${styles.servicesSection}`}>
             <div className={styles.sectionHeader}>
               <h2>Services</h2>
               <p>
@@ -130,13 +139,14 @@ export default function Home() {
           <section className={styles.aboutStrip}>
             <div className={styles.aboutText}>
               <h2>Design that balances beauty and function.</h2>
+
               <p>
-                Betsy Mugendi Architecture focuses on creating spaces that feel
-                bold, clean, and livable — where every detail has intention.
+                Betsy Mugendi Architecture focuses on creating spaces that feel bold,
+                clean, and livable — where every detail has intention.
               </p>
 
-              <Link className={styles.secondaryBtn} href="/about">
-                Learn More
+              <Link className={styles.aboutBtn} href="/about">
+                Learn More →
               </Link>
             </div>
 
@@ -147,16 +157,19 @@ export default function Home() {
         {/* CTA */}
         <Reveal delay={0.25}>
           <section className={styles.cta}>
-            <h2>Ready to start your project?</h2>
-            <p>
-              Send a message and let’s discuss your space, budget, and timeline.
-            </p>
+            <div className={styles.ctaInner}>
+              <h2>Ready to start your project?</h2>
+              <p>
+                Send a message and let’s discuss your space, budget, and timeline.
+              </p>
 
-            <Link className={styles.primaryBtn} href="/contact">
-              Contact Betsy
-            </Link>
+              <Link className={styles.ctaBtn} href="/contact">
+                Contact Betsy
+              </Link>
+            </div>
           </section>
         </Reveal>
+
       </main>
     </>
   )

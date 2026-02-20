@@ -115,7 +115,7 @@ ${message || '...'}`
 
               <div className={styles.actions}>
                 <button className={styles.submitButton} type="submit" disabled>
-                  Send (Email Backend Coming Soon)
+                  Send (Email Backend Coming Soon)  
                 </button>
 
                 <a
