@@ -10,7 +10,7 @@ export default function ContactPage() {
 
   // Replace this with Betsy's real WhatsApp number (international format, no +) after she sends me
   // Example Kenya: 2547XXXXXXXX
-  const whatsappNumber = '254758421984'
+  const whatsappNumber = '254712388565'
 
   const whatsappText = `Hello Betsy, my name is ${name || '...'}.
 I’m interested in working with you.
