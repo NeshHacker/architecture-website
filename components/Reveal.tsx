@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
 
 interface RevealProps {
-  children: ReactNode
+  children: React.ReactNode;
+  delay?: number;
 }
 
 export default function Reveal({ children }: RevealProps) {
