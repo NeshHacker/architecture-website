@@ -13,7 +13,7 @@ export default function Navigation() {
     <header className={styles.navbar}>
       <div className={styles.inner}>
         {/* Logo */}
-        <Link href="/" className={styles.brand}>
+        <Link href="/" className={styles.brand} onClick={() => setMobileOpen(false)}>
           <img
             src="/images/logo/logo1.png"
             alt="Betsy Mugendi Logo"
@@ -21,15 +21,6 @@ export default function Navigation() {
           />
           <span>BETSY <strong>MUGENDI</strong></span>
         </Link>
-
-        {/* Links */}
-        <nav className={`${styles.links} ${mobileOpen ? styles.open : ''}`}>
-          <Link href="/" className={isActive('/') ? styles.active : ''} onClick={() => setMobileOpen(false)}>Home</Link>
-          <Link href="/projects" className={isActive('/projects') ? styles.active : ''} onClick={() => setMobileOpen(false)}>Projects</Link>
-          <Link href="/services" className={isActive('/services') ? styles.active : ''} onClick={() => setMobileOpen(false)}>Services</Link>
-          <Link href="/about" className={isActive('/about') ? styles.active : ''} onClick={() => setMobileOpen(false)}>About</Link>
-          <Link href="/contact" className={isActive('/contact') ? styles.active : ''} onClick={() => setMobileOpen(false)}>Contact</Link>
-        </nav>
 
         {/* Hamburger */}
         <div
@@ -40,6 +31,15 @@ export default function Navigation() {
           <span></span>
           <span></span>
         </div>
+
+        {/* Links */}
+        <nav className={`${styles.links} ${mobileOpen ? styles.open : ''}`}>
+          <Link href="/" className={isActive('/') ? styles.active : ''} onClick={() => setMobileOpen(false)}>Home</Link>
+          <Link href="/projects" className={isActive('/projects') ? styles.active : ''} onClick={() => setMobileOpen(false)}>Projects</Link>
+          <Link href="/services" className={isActive('/services') ? styles.active : ''} onClick={() => setMobileOpen(false)}>Services</Link>
+          <Link href="/about" className={isActive('/about') ? styles.active : ''} onClick={() => setMobileOpen(false)}>About</Link>
+          <Link href="/contact" className={isActive('/contact') ? styles.active : ''} onClick={() => setMobileOpen(false)}>Contact</Link>
+        </nav>
       </div>
 
       {/* Mobile Overlay */}
