@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/Nav.module.css";
 
 export default function Navigation() {
@@ -19,9 +20,16 @@ export default function Navigation() {
     <>
       <header className={styles.navbar}>
         <div className={styles.inner}>
-          <div className={styles.brand}>
-            <span>Architect</span>
-          </div>
+          <Link href="/" className={styles.brand} onClick={closeMenu}>
+            <Image
+              src="/images/logo/logo1.png"
+              alt="Betsy Mugendi Architect Logo"
+              width={48}
+              height={48}
+              priority
+            />
+            <span>Betsy Mugendi Architect</span>
+          </Link>
 
           <button
             className={`${styles.hamburger} ${menuOpen ? styles.active : ""}`}

@@ -17,20 +17,29 @@
   justify-content: space-between;
 }
 
-/* Logo */
+/* Logo & Brand */
 .brand {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 600;
+  text-decoration: none;
   color: #e8e8ea;
   white-space: nowrap;
   flex-shrink: 0;
+  transition: color 0.2s;
 }
 
-.brand strong {
-  font-weight: 700;
+.brand:hover {
+  color: #00ffc8;
+}
+
+.brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 /* Desktop Links */
@@ -140,5 +149,9 @@
 
   .hamburger {
     display: flex;
+  }
+
+  .brand span {
+    display: none;
   }
 }
