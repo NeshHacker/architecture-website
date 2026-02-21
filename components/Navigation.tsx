@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/Nav.module.css";
@@ -16,31 +18,49 @@ export default function Navigation() {
   return (
     <>
       <header className={styles.navbar}>
-        <div className={styles.logo}>Architect</div>
+        <div className={styles.inner}>
+          <div className={styles.brand}>
+            <span>Architect</span>
+          </div>
 
-        <div className={styles.hamburger} onClick={toggleMenu}>
-          {menuOpen ? "✕" : "☰"}
+          <button
+            className={`${styles.hamburger} ${menuOpen ? styles.active : ""}`}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav className={`${styles.links} ${menuOpen ? styles.open : ""}`}>
+            <Link href="/" onClick={closeMenu}>
+              Home
+            </Link>
+            <Link href="/projects" onClick={closeMenu}>
+              Projects
+            </Link>
+            <Link href="/services" onClick={closeMenu}>
+              Services
+            </Link>
+            <Link href="/about" onClick={closeMenu}>
+              About
+            </Link>
+            <Link href="/contact" onClick={closeMenu}>
+              Contact
+            </Link>
+          </nav>
         </div>
-
-        <nav
-          className={`${styles.navLinks} ${
-            menuOpen ? styles.active : ""
-          }`}
-        >
-          <Link href="/" onClick={closeMenu}>Home</Link>
-          <Link href="/projects" onClick={closeMenu}>Projects</Link>
-          <Link href="/services" onClick={closeMenu}>Services</Link>
-          <Link href="/about" onClick={closeMenu}>About</Link>
-          <Link href="/contact" onClick={closeMenu}>Contact</Link>
-        </nav>
       </header>
 
-      <div
-        className={`${styles.overlay} ${
-          menuOpen ? styles.showOverlay : ""
-        }`}
-        onClick={closeMenu}
-      />
+      {menuOpen && (
+        <div
+          className={styles.overlay}
+          onClick={closeMenu}
+          aria-hidden="true"
+        />
+      )}
     </>
   );
 }
